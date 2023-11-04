@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "JJEWD2nGqzjcTmnbVYCRsrqLf2VyEt8e4tU2EvrE/ycs+Afr51BSQMy+JVgruUxRkvx+4ura2VcZi+3fWj/Ptg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Администратор.VDSWIN2K16\\Desktop\\Githab\\ToDo-List\\src\\Backend\\ToDoList-Backend\\UserServices.Application\\UserServices.Application.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Администратор.VDSWIN2K16\\.nuget\\packages\\mediatr\\12.1.1\\mediatr.12.1.1.nupkg.sha512",
+    "C:\\Users\\Администратор.VDSWIN2K16\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
+    "C:\\Users\\Администратор.VDSWIN2K16\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
