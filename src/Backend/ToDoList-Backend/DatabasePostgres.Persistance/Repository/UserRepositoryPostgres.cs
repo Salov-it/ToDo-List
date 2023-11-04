@@ -75,5 +75,32 @@ namespace DatabasePostgres.Persistance.Repository
             return GetByUserInfoResult;
         }
 
+        UserDataVerificationDto UserDataVerificationResult = new UserDataVerificationDto();
+        public async Task<UserDataVerificationDto> UserDataVerification(string Login,string Email)
+        {
+            await using var dataSource = NpgsqlDataSource.Create(_Connect);
+            await using (var cmd = dataSource.CreateCommand(_userSql.GetByUserInfo))
+            {
+                cmd.Parameters.AddWithValue("@Login", Login);
+                cmd.Parameters.AddWithValue("@Email", Email);
+
+                await using (var reader = await cmd.ExecuteReaderAsync())
+                {
+
+                    while (await reader.ReadAsync())
+                    {
+                        var login = reader.GetString(0);
+                        var email = reader.GetString(2);
+                        UserDataVerificationResult = new UserDataVerificationDto
+                        {
+                            Login = login,
+                            Email = email
+                        };
+                    }
+                }
+                return UserDataVerificationResult;
+            }
+        }
+
     }
 }
