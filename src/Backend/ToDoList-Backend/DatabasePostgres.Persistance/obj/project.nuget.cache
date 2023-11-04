@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "LUMB+y1K8260vB7E6Vbhuuje5jBYoLhLME9jNp+C55gYi7w8EDN1btiBbT8EurLWtekUA+o/7KRwf2WkyU2niA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Администратор.VDSWIN2K16\\Desktop\\Githab\\ToDo-List\\src\\Backend\\ToDoList-Backend\\DatabasePostgres.Persistance\\DatabasePostgres.Persistance.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Администратор.VDSWIN2K16\\.nuget\\packages\\mediatr\\12.1.1\\mediatr.12.1.1.nupkg.sha512",
+    "C:\\Users\\Администратор.VDSWIN2K16\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
+    "C:\\Users\\Администратор.VDSWIN2K16\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\Администратор.VDSWIN2K16\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\Администратор.VDSWIN2K16\\.nuget\\packages\\npgsql\\7.0.6\\npgsql.7.0.6.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,17 @@
+C:\Users\Администратор.VDSWIN2K16\Desktop\Githab\ToDo-List\src\Backend\ToDoList-Backend\UserServices.Application\bin\Debug\net7.0\UserServices.Application.deps.json
+C:\Users\Администратор.VDSWIN2K16\Desktop\Githab\ToDo-List\src\Backend\ToDoList-Backend\UserServices.Application\bin\Debug\net7.0\UserServices.Application.dll
+C:\Users\Администратор.VDSWIN2K16\Desktop\Githab\ToDo-List\src\Backend\ToDoList-Backend\UserServices.Application\bin\Debug\net7.0\UserServices.Application.pdb
+C:\Users\Администратор.VDSWIN2K16\Desktop\Githab\ToDo-List\src\Backend\ToDoList-Backend\UserServices.Application\bin\Debug\net7.0\DatabasePostgres.Persistance.dll
+C:\Users\Администратор.VDSWIN2K16\Desktop\Githab\ToDo-List\src\Backend\ToDoList-Backend\UserServices.Application\bin\Debug\net7.0\UserServices.Domain.dll
+C:\Users\Администратор.VDSWIN2K16\Desktop\Githab\ToDo-List\src\Backend\ToDoList-Backend\UserServices.Application\bin\Debug\net7.0\DatabasePostgres.Persistance.pdb
+C:\Users\Администратор.VDSWIN2K16\Desktop\Githab\ToDo-List\src\Backend\ToDoList-Backend\UserServices.Application\bin\Debug\net7.0\UserServices.Domain.pdb
+C:\Users\Администратор.VDSWIN2K16\Desktop\Githab\ToDo-List\src\Backend\ToDoList-Backend\UserServices.Application\obj\Debug\net7.0\UserServices.Application.csproj.AssemblyReference.cache
+C:\Users\Администратор.VDSWIN2K16\Desktop\Githab\ToDo-List\src\Backend\ToDoList-Backend\UserServices.Application\obj\Debug\net7.0\UserServices.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Администратор.VDSWIN2K16\Desktop\Githab\ToDo-List\src\Backend\ToDoList-Backend\UserServices.Application\obj\Debug\net7.0\UserServices.Application.AssemblyInfoInputs.cache
+C:\Users\Администратор.VDSWIN2K16\Desktop\Githab\ToDo-List\src\Backend\ToDoList-Backend\UserServices.Application\obj\Debug\net7.0\UserServices.Application.AssemblyInfo.cs
+C:\Users\Администратор.VDSWIN2K16\Desktop\Githab\ToDo-List\src\Backend\ToDoList-Backend\UserServices.Application\obj\Debug\net7.0\UserServices.Application.csproj.CoreCompileInputs.cache
+C:\Users\Администратор.VDSWIN2K16\Desktop\Githab\ToDo-List\src\Backend\ToDoList-Backend\UserServices.Application\obj\Debug\net7.0\UserServices.Application.csproj.CopyComplete
+C:\Users\Администратор.VDSWIN2K16\Desktop\Githab\ToDo-List\src\Backend\ToDoList-Backend\UserServices.Application\obj\Debug\net7.0\UserServices.Application.dll
+C:\Users\Администратор.VDSWIN2K16\Desktop\Githab\ToDo-List\src\Backend\ToDoList-Backend\UserServices.Application\obj\Debug\net7.0\refint\UserServices.Application.dll
+C:\Users\Администратор.VDSWIN2K16\Desktop\Githab\ToDo-List\src\Backend\ToDoList-Backend\UserServices.Application\obj\Debug\net7.0\UserServices.Application.pdb
+C:\Users\Администратор.VDSWIN2K16\Desktop\Githab\ToDo-List\src\Backend\ToDoList-Backend\UserServices.Application\obj\Debug\net7.0\ref\UserServices.Application.dll
