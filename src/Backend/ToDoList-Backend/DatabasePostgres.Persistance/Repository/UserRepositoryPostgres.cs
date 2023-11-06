@@ -79,7 +79,7 @@ namespace DatabasePostgres.Persistance.Repository
         public async Task<UserDataVerificationDto> UserDataVerification(string Login,string Email)
         {
             await using var dataSource = NpgsqlDataSource.Create(_Connect);
-            await using (var cmd = dataSource.CreateCommand(_userSql.GetByUserInfo))
+            await using (var cmd = dataSource.CreateCommand(_userSql.Datachecking))
             {
                 cmd.Parameters.AddWithValue("@Login", Login);
                 cmd.Parameters.AddWithValue("@Email", Email);
@@ -90,7 +90,7 @@ namespace DatabasePostgres.Persistance.Repository
                     while (await reader.ReadAsync())
                     {
                         var login = reader.GetString(0);
-                        var email = reader.GetString(2);
+                        var email = reader.GetString(1);
                         UserDataVerificationResult = new UserDataVerificationDto
                         {
                             Login = login,

@@ -11,6 +11,6 @@ namespace DatabasePostgres.Persistance.SqlRequest.UserSqlRequest
 
         public string GetByUserInfo = "SELECT login,password,email,role FROM Users WHERE login = @login;";
 
-        public string Datachecking = "SELECT login,email FROM Users WHERE NOT Login = @Login OR Email = @Email";
+        public string Datachecking = "SELECT login,email FROM Users WHERE  login = @Login OR email = @Email;";
     }
 }

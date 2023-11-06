@@ -17,8 +17,6 @@ namespace UserServices.Application.CQRS.Command.UserRegistration
         }
         public async Task<string> Handle(RegistrationCommand request, CancellationToken cancellationToken)
         {
-
-           
                 if (!Regex.IsMatch(request.registrationDto.Email, Config.FormValidation.EmailFormat))
                 {
                     Resullt = "Неверный формат email.";
