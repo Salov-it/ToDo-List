@@ -41,7 +41,6 @@ namespace UserServices.Application.CQRS.Command.UserRegistration
                         }
                     }
                 }
-            
             return Resullt;
         }
     }
