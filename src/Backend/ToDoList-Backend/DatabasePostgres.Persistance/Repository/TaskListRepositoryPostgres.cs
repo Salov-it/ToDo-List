@@ -6,7 +6,7 @@ using Npgsql;
 
 namespace DatabasePostgres.Persistance.Repository
 {
-    public class TaskListRepositoryPostgre : UserRepositoryPostgres, ITaskListRepositoryPostgres
+    public class TaskListRepositoryPostgres : UserRepositoryPostgres, ITaskListRepositoryPostgres
     {
         TaskListSqlRequest _TaskSql = new TaskListSqlRequest();
         public async Task<string> Add(PostTaskListDto taskListDto)
@@ -14,7 +14,7 @@ namespace DatabasePostgres.Persistance.Repository
             await using var dataSource = NpgsqlDataSource.Create(_Connect);
             await using (var cmd = dataSource.CreateCommand(_TaskSql.Add))
             {
-                cmd.Parameters.AddWithValue("(@Text",taskListDto.text);
+                cmd.Parameters.AddWithValue("(@texts", taskListDto.text);
                 cmd.Parameters.AddWithValue("@StatusTasks",taskListDto.StatusTasks);
                 cmd.Parameters.AddWithValue("@Created",taskListDto.Created);
                 await cmd.ExecuteNonQueryAsync();

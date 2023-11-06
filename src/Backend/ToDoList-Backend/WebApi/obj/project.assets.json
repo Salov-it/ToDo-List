@@ -349,6 +349,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
+          "DatabasePostgres.Persistance": "1.0.0",
           "MediatR": "12.1.1",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "7.0.0"
         },

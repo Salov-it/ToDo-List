@@ -100,7 +100,11 @@
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\Администратор.VDSWIN2K16\\Desktop\\Githab\\ToDo-List\\src\\Backend\\ToDoList-Backend\\DatabasePostgres.Persistance\\DatabasePostgres.Persistance.csproj": {
+                "projectPath": "C:\\Users\\Администратор.VDSWIN2K16\\Desktop\\Githab\\ToDo-List\\src\\Backend\\ToDoList-Backend\\DatabasePostgres.Persistance\\DatabasePostgres.Persistance.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
