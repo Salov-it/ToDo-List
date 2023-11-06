@@ -345,6 +345,20 @@
           "bin/placeholder/DatabasePostgres.Persistance.dll": {}
         }
       },
+      "TaskListServices.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "MediatR": "12.1.1",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "7.0.0"
+        },
+        "compile": {
+          "bin/placeholder/TaskListServices.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TaskListServices.Application.dll": {}
+        }
+      },
       "UserServices.Application/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
@@ -1128,6 +1142,11 @@
       "path": "../DatabasePostgres.Persistance/DatabasePostgres.Persistance.csproj",
       "msbuildProject": "../DatabasePostgres.Persistance/DatabasePostgres.Persistance.csproj"
     },
+    "TaskListServices.Application/1.0.0": {
+      "type": "project",
+      "path": "../TaskListServices.Application/TaskListServices.Application.csproj",
+      "msbuildProject": "../TaskListServices.Application/TaskListServices.Application.csproj"
+    },
     "UserServices.Application/1.0.0": {
       "type": "project",
       "path": "../UserServices.Application/UserServices.Application.csproj",
@@ -1144,6 +1163,7 @@
       "DatabasePostgres.Persistance >= 1.0.0",
       "Microsoft.AspNetCore.OpenApi >= 7.0.11",
       "Swashbuckle.AspNetCore >= 6.5.0",
+      "TaskListServices.Application >= 1.0.0",
       "UserServices.Application >= 1.0.0"
     ]
   },
@@ -1176,6 +1196,9 @@
           "projectReferences": {
             "C:\\Users\\Администратор.VDSWIN2K16\\Desktop\\Githab\\ToDo-List\\src\\Backend\\ToDoList-Backend\\DatabasePostgres.Persistance\\DatabasePostgres.Persistance.csproj": {
               "projectPath": "C:\\Users\\Администратор.VDSWIN2K16\\Desktop\\Githab\\ToDo-List\\src\\Backend\\ToDoList-Backend\\DatabasePostgres.Persistance\\DatabasePostgres.Persistance.csproj"
+            },
+            "C:\\Users\\Администратор.VDSWIN2K16\\Desktop\\Githab\\ToDo-List\\src\\Backend\\ToDoList-Backend\\TaskListServices.Application\\TaskListServices.Application.csproj": {
+              "projectPath": "C:\\Users\\Администратор.VDSWIN2K16\\Desktop\\Githab\\ToDo-List\\src\\Backend\\ToDoList-Backend\\TaskListServices.Application\\TaskListServices.Application.csproj"
             },
             "C:\\Users\\Администратор.VDSWIN2K16\\Desktop\\Githab\\ToDo-List\\src\\Backend\\ToDoList-Backend\\UserServices.Application\\UserServices.Application.csproj": {
               "projectPath": "C:\\Users\\Администратор.VDSWIN2K16\\Desktop\\Githab\\ToDo-List\\src\\Backend\\ToDoList-Backend\\UserServices.Application\\UserServices.Application.csproj"
