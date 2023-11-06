@@ -48,9 +48,9 @@
               "target": "Package",
               "version": "[7.0.0, )"
             },
-            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+            "Npgsql": {
               "target": "Package",
-              "version": "[7.0.11, )"
+              "version": "[7.0.6, )"
             }
           },
           "imports": [
@@ -109,9 +109,9 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
-            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+            "Npgsql": {
               "target": "Package",
-              "version": "[7.0.11, )"
+              "version": "[7.0.6, )"
             }
           },
           "imports": [

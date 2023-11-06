@@ -1,5 +1,4 @@
 ﻿
-
 namespace UserServices.Domain
 {
     public class User
