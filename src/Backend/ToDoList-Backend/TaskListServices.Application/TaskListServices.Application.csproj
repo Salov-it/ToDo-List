@@ -17,6 +17,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\DatabasePostgres.Persistance\DatabasePostgres.Persistance.csproj" />
+    <ProjectReference Include="..\TaskListServices.Domain\TaskListServices.Domain.csproj" />
   </ItemGroup>
 
 </Project>

@@ -3,6 +3,7 @@ using DatabasePostgres.Persistance.Dto.TaskListDto;
 using DatabasePostgres.Persistance.Interface;
 using DatabasePostgres.Persistance.SqlRequest.TaskListSqlRequest;
 using Npgsql;
+using System.Data;
 
 namespace DatabasePostgres.Persistance.Repository
 {
@@ -11,16 +12,18 @@ namespace DatabasePostgres.Persistance.Repository
         TaskListSqlRequest _TaskSql = new TaskListSqlRequest();
         public async Task<string> Add(PostTaskListDto taskListDto)
         {
-            await using var dataSource = NpgsqlDataSource.Create(_Connect);
-            await using var cmd = new NpgsqlCommand(_TaskSql.Add)
+            await using var conn = new NpgsqlConnection(_Connect);
+            await conn.OpenAsync();
+            await using var cmd = new NpgsqlCommand(_TaskSql.Add,conn)
             {
                 Parameters =
                 {
                     new() { Value = taskListDto.text },
                     new() { Value = taskListDto.StatusTasks },
                     new() { Value = taskListDto.Created }
-                }
+                } 
             };
+            await cmd.ExecuteNonQueryAsync();
             return "Выполнено";
         }
 
@@ -60,14 +63,14 @@ namespace DatabasePostgres.Persistance.Repository
                         var id = reader.GetInt16(0);
                         var text = reader.GetString(1);
                         var StatusTasks = reader.GetBoolean(2);
-                        var Created = reader.GetData(3);
+                        var Created = reader.GetDateTime(3);
 
                         TaskListDto = new GetAllTaskListDto
                         {
                             id = id,
                             text = text,
                             StatusTasks = StatusTasks,
-                            Created = Created.ToString()
+                            Created = Created
                         };
                         Result.Add(TaskListDto);
                     }

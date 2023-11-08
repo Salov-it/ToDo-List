@@ -99,3 +99,5 @@ C:\Users\Администратор.VDSWIN2K16\Desktop\Githab\ToDo-List\src\Back
 C:\Users\Администратор.VDSWIN2K16\Desktop\Githab\ToDo-List\src\Backend\ToDoList-Backend\WebApi\obj\Debug\net7.0\WebApi.pdb
 C:\Users\Администратор.VDSWIN2K16\Desktop\Githab\ToDo-List\src\Backend\ToDoList-Backend\WebApi\obj\Debug\net7.0\WebApi.genruntimeconfig.cache
 C:\Users\Администратор.VDSWIN2K16\Desktop\Githab\ToDo-List\src\Backend\ToDoList-Backend\WebApi\obj\Debug\net7.0\ref\WebApi.dll
+C:\Users\Администратор.VDSWIN2K16\Desktop\Githab\ToDo-List\src\Backend\ToDoList-Backend\WebApi\bin\Debug\net7.0\TaskListServices.Domain.dll
+C:\Users\Администратор.VDSWIN2K16\Desktop\Githab\ToDo-List\src\Backend\ToDoList-Backend\WebApi\bin\Debug\net7.0\TaskListServices.Domain.pdb

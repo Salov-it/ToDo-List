@@ -2,6 +2,7 @@
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using TaskListServices.Application.CQRS.Command.Create;
+using TaskListServices.Application.CQRS.Command.GetAll;
 
 namespace WebApi.Controllers
 {
@@ -21,6 +22,17 @@ namespace WebApi.Controllers
             var Content = new CreateTaskListCommand
             {
                 CreateTaskListDto = taskListDto,
+            };
+            var answer = await mediator.Send(Content);
+            return Ok(answer);
+        }
+
+        [HttpPost("GetAll")]
+        public async Task<IActionResult> GetAll()
+        {
+            var Content = new TaskListCommand
+            {
+                
             };
             var answer = await mediator.Send(Content);
             return Ok(answer);
