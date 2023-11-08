@@ -12,13 +12,15 @@ namespace DatabasePostgres.Persistance.Repository
         public async Task<string> Add(PostTaskListDto taskListDto)
         {
             await using var dataSource = NpgsqlDataSource.Create(_Connect);
-            await using (var cmd = dataSource.CreateCommand(_TaskSql.Add))
+            await using var cmd = new NpgsqlCommand(_TaskSql.Add)
             {
-                cmd.Parameters.AddWithValue("(@texts", taskListDto.text);
-                cmd.Parameters.AddWithValue("@StatusTasks",taskListDto.StatusTasks);
-                cmd.Parameters.AddWithValue("@Created",taskListDto.Created);
-                await cmd.ExecuteNonQueryAsync();
-            }
+                Parameters =
+                {
+                    new() { Value = taskListDto.text },
+                    new() { Value = taskListDto.StatusTasks },
+                    new() { Value = taskListDto.Created }
+                }
+            };
             return "Выполнено";
         }
 
