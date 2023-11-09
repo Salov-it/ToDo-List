@@ -29,7 +29,7 @@ namespace WebApi.Controllers
             return Ok(answer);
         }
 
-        [HttpPost("Update")]
+        [HttpPut("Update")]
         public async Task<IActionResult> Update([FromBody] UpdateTaskListDto updateTaskListDto)
         {
             var Content = new UpdateTaskListCommand
