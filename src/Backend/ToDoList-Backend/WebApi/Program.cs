@@ -12,6 +12,9 @@ builder.Services.AddUserServices();
 //Infrastructure
 builder.Services.AddDatabasePostgres();
 
+//TaskListServices
+builder.Services.AddTaskListServices();
+
 
 // Add services to the container.
 

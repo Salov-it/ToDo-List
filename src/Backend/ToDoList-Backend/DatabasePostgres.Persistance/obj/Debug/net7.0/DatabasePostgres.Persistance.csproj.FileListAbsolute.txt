@@ -1,0 +1,15 @@
+C:\Users\Администратор.VDSWIN2K16\Desktop\Githab\ToDo-List\src\Backend\ToDoList-Backend\DatabasePostgres.Persistance\bin\Debug\net7.0\DatabasePostgres.Persistance.deps.json
+C:\Users\Администратор.VDSWIN2K16\Desktop\Githab\ToDo-List\src\Backend\ToDoList-Backend\DatabasePostgres.Persistance\bin\Debug\net7.0\DatabasePostgres.Persistance.dll
+C:\Users\Администратор.VDSWIN2K16\Desktop\Githab\ToDo-List\src\Backend\ToDoList-Backend\DatabasePostgres.Persistance\bin\Debug\net7.0\DatabasePostgres.Persistance.pdb
+C:\Users\Администратор.VDSWIN2K16\Desktop\Githab\ToDo-List\src\Backend\ToDoList-Backend\DatabasePostgres.Persistance\bin\Debug\net7.0\UserServices.Domain.dll
+C:\Users\Администратор.VDSWIN2K16\Desktop\Githab\ToDo-List\src\Backend\ToDoList-Backend\DatabasePostgres.Persistance\bin\Debug\net7.0\UserServices.Domain.pdb
+C:\Users\Администратор.VDSWIN2K16\Desktop\Githab\ToDo-List\src\Backend\ToDoList-Backend\DatabasePostgres.Persistance\obj\Debug\net7.0\DatabasePostgres.Persistance.csproj.AssemblyReference.cache
+C:\Users\Администратор.VDSWIN2K16\Desktop\Githab\ToDo-List\src\Backend\ToDoList-Backend\DatabasePostgres.Persistance\obj\Debug\net7.0\DatabasePostgres.Persistance.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Администратор.VDSWIN2K16\Desktop\Githab\ToDo-List\src\Backend\ToDoList-Backend\DatabasePostgres.Persistance\obj\Debug\net7.0\DatabasePostgres.Persistance.AssemblyInfoInputs.cache
+C:\Users\Администратор.VDSWIN2K16\Desktop\Githab\ToDo-List\src\Backend\ToDoList-Backend\DatabasePostgres.Persistance\obj\Debug\net7.0\DatabasePostgres.Persistance.AssemblyInfo.cs
+C:\Users\Администратор.VDSWIN2K16\Desktop\Githab\ToDo-List\src\Backend\ToDoList-Backend\DatabasePostgres.Persistance\obj\Debug\net7.0\DatabasePostgres.Persistance.csproj.CoreCompileInputs.cache
+C:\Users\Администратор.VDSWIN2K16\Desktop\Githab\ToDo-List\src\Backend\ToDoList-Backend\DatabasePostgres.Persistance\obj\Debug\net7.0\DatabasePostgres.Persistance.csproj.CopyComplete
+C:\Users\Администратор.VDSWIN2K16\Desktop\Githab\ToDo-List\src\Backend\ToDoList-Backend\DatabasePostgres.Persistance\obj\Debug\net7.0\DatabasePostgres.Persistance.dll
+C:\Users\Администратор.VDSWIN2K16\Desktop\Githab\ToDo-List\src\Backend\ToDoList-Backend\DatabasePostgres.Persistance\obj\Debug\net7.0\refint\DatabasePostgres.Persistance.dll
+C:\Users\Администратор.VDSWIN2K16\Desktop\Githab\ToDo-List\src\Backend\ToDoList-Backend\DatabasePostgres.Persistance\obj\Debug\net7.0\DatabasePostgres.Persistance.pdb
+C:\Users\Администратор.VDSWIN2K16\Desktop\Githab\ToDo-List\src\Backend\ToDoList-Backend\DatabasePostgres.Persistance\obj\Debug\net7.0\ref\DatabasePostgres.Persistance.dll
