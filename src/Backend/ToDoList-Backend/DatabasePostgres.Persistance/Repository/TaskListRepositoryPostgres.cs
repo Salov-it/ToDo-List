@@ -3,7 +3,6 @@ using DatabasePostgres.Persistance.Dto.TaskListDto;
 using DatabasePostgres.Persistance.Interface;
 using DatabasePostgres.Persistance.SqlRequest.TaskListSqlRequest;
 using Npgsql;
-using System.Data;
 
 namespace DatabasePostgres.Persistance.Repository
 {
@@ -39,12 +38,17 @@ namespace DatabasePostgres.Persistance.Repository
 
         public async Task<string> Delete(DeleteTaskListDto deleteTaskListDto)
         {
-            await using var dataSource = NpgsqlDataSource.Create(_Connect);
-            await using (var cmd = dataSource.CreateCommand(_TaskSql.Delete))
+            await using var conn = new NpgsqlConnection(_Connect);
+            await conn.OpenAsync();
+            await using var cmd = new NpgsqlCommand(_TaskSql.Delete, conn)
             {
-                cmd.Parameters.AddWithValue("(@id",deleteTaskListDto.id);
-                await cmd.ExecuteNonQueryAsync();
-            }
+                Parameters =
+                {
+                    new() { Value = deleteTaskListDto.id },
+                  
+                }
+            };
+            await cmd.ExecuteNonQueryAsync();
             return "Выполнено";
         }
 

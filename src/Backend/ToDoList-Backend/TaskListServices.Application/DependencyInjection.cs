@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
 using TaskListServices.Application.CQRS.Command.Create;
+using TaskListServices.Application.CQRS.Command.Delete;
 using TaskListServices.Application.CQRS.Command.GetAll;
 using TaskListServices.Application.Interface;
 
@@ -20,6 +21,10 @@ namespace UserServices.Application
             services.AddScoped<IGetTaskList,GetTaskList>();
             services.AddScoped<TaskListCommand>();
             services.AddScoped<TaskListHandler>();
+
+            services.AddScoped<IDeletTaskList, DeletTaskList>();
+            services.AddScoped<DeleteTaskListDtoCommand>();
+            services.AddScoped<DeleteTaskListDtoHandler>();
 
 
             return services;

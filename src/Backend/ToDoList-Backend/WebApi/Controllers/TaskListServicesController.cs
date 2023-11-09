@@ -2,6 +2,7 @@
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using TaskListServices.Application.CQRS.Command.Create;
+using TaskListServices.Application.CQRS.Command.Delete;
 using TaskListServices.Application.CQRS.Command.GetAll;
 
 namespace WebApi.Controllers
@@ -27,12 +28,23 @@ namespace WebApi.Controllers
             return Ok(answer);
         }
 
-        [HttpPost("GetAll")]
+        [HttpGet("GetAll")]
         public async Task<IActionResult> GetAll()
         {
             var Content = new TaskListCommand
             {
                 
+            };
+            var answer = await mediator.Send(Content);
+            return Ok(answer);
+        }
+
+        [HttpDelete("Delete")]
+        public async Task<IActionResult> Delete([FromBody] DeleteTaskListDto deleteTaskListDto )
+        {
+            var Content = new DeleteTaskListDtoCommand
+            {
+                deleteTaskListDto = deleteTaskListDto
             };
             var answer = await mediator.Send(Content);
             return Ok(answer);

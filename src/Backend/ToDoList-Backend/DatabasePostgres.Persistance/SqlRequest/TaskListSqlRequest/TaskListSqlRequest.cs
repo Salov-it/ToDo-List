@@ -11,7 +11,7 @@ namespace DatabasePostgres.Persistance.SqlRequest.TaskListSqlRequest
 
         public string GetTasksInfo = "SELECT * FROM Tasks;";
 
-        public string Delete = "DELETE FROM Tasks WHERE id = @id;";
+        public string Delete = "DELETE FROM tasks WHERE id = $1;";
 
         public string Update = "UPDATE Tasks SET text = @text,StatusTasks = @StatusTasks WHERE id = @id RETURNING *;";
     }
