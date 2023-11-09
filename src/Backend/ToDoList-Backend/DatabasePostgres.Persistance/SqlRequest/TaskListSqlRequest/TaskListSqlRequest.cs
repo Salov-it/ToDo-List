@@ -13,6 +13,6 @@ namespace DatabasePostgres.Persistance.SqlRequest.TaskListSqlRequest
 
         public string Delete = "DELETE FROM tasks WHERE id = $1;";
 
-        public string Update = "UPDATE Tasks SET text = @text,StatusTasks = @StatusTasks WHERE id = @id RETURNING *;";
+        public string Update = "UPDATE Tasks SET texts = $2,statustasks = $3 WHERE id = $1 RETURNING *;";
     }
 }

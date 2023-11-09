@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using TaskListServices.Application.CQRS.Command.Create;
 using TaskListServices.Application.CQRS.Command.Delete;
 using TaskListServices.Application.CQRS.Command.GetAll;
+using TaskListServices.Application.CQRS.Command.Update;
 
 namespace WebApi.Controllers
 {
@@ -23,6 +24,17 @@ namespace WebApi.Controllers
             var Content = new CreateTaskListCommand
             {
                 CreateTaskListDto = taskListDto,
+            };
+            var answer = await mediator.Send(Content);
+            return Ok(answer);
+        }
+
+        [HttpPost("Update")]
+        public async Task<IActionResult> Update([FromBody] UpdateTaskListDto updateTaskListDto)
+        {
+            var Content = new UpdateTaskListCommand
+            {
+               UpdateTaskListDto = updateTaskListDto
             };
             var answer = await mediator.Send(Content);
             return Ok(answer);

@@ -3,6 +3,8 @@ using System.Reflection;
 using TaskListServices.Application.CQRS.Command.Create;
 using TaskListServices.Application.CQRS.Command.Delete;
 using TaskListServices.Application.CQRS.Command.GetAll;
+using TaskListServices.Application.CQRS.Command.Update;
+using TaskListServices.Application.CQRS.Command.Upgate;
 using TaskListServices.Application.Interface;
 
 namespace UserServices.Application
@@ -26,6 +28,9 @@ namespace UserServices.Application
             services.AddScoped<DeleteTaskListDtoCommand>();
             services.AddScoped<DeleteTaskListDtoHandler>();
 
+            services.AddScoped<IUpdateTaskList, UpdateTaskList>();
+            services.AddScoped<UpdateTaskListCommand>();
+            services.AddScoped<UpdateTaskListHandler>();
 
             return services;
         }

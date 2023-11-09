@@ -86,31 +86,34 @@ namespace DatabasePostgres.Persistance.Repository
         public UpdateTaskListDto updateTaskListDto = new UpdateTaskListDto();
         public async Task<UpdateTaskListDto> Update(UpdateTaskListDto updateTaskListDto)
         {
-            await using var dataSource = NpgsqlDataSource.Create(_Connect);
-            await using (var cmd = dataSource.CreateCommand(_TaskSql.Update))
+            await using var conn = new NpgsqlConnection(_Connect);
+            await conn.OpenAsync();
+            await using var cmd = new NpgsqlCommand(_TaskSql.Update, conn)
             {
-                cmd.Parameters.AddWithValue("(@id",updateTaskListDto.id);
-                cmd.Parameters.AddWithValue("@text",updateTaskListDto.text);
-                cmd.Parameters.AddWithValue("@StatusTasks",updateTaskListDto.StatusTasks);
-                await cmd.ExecuteNonQueryAsync();
-
-                await using (var reader = await cmd.ExecuteReaderAsync())
+                Parameters =
                 {
-
-                    while (await reader.ReadAsync())
-                    {
-                        var id = reader.GetInt16(0);
-                        var text = reader.GetString(1);
-                        var StatusTasks = reader.GetBoolean(2);
-                        
-                        updateTaskListDto = new UpdateTaskListDto
-                        {
-                            id = id,
-                            text = text,
-                            StatusTasks = StatusTasks
-                        };
-                    }
+                    new() { Value = updateTaskListDto.id },
+                    new() { Value = updateTaskListDto.text },
+                    new() { Value = updateTaskListDto.StatusTasks }
                 }
+            };
+
+            await using (var reader = await cmd.ExecuteReaderAsync())
+            {
+
+              while (await reader.ReadAsync())
+              {
+                 var id = reader.GetInt16(0);
+                 var text = reader.GetString(1);
+                 var StatusTasks = reader.GetBoolean(2);
+                        
+                 updateTaskListDto = new UpdateTaskListDto
+                 {
+                   id = id,
+                   text = text,
+                   StatusTasks = StatusTasks
+                 };
+              }
             }
             return updateTaskListDto;
         }
