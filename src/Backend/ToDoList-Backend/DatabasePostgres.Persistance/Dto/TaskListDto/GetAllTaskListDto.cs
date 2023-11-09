@@ -8,6 +8,7 @@ namespace DatabasePostgres.Persistance.Dto.TaskListDto
         public string text { get; set; }
         public bool StatusTasks { get; set; }
         public DateTime Created { get; set; }
+        public string Eror { get; set; }
        
     }
 }
