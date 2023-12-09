@@ -1,0 +1,6 @@
+
+//Регистрация Post json
+http://localhost:59856//api/Account/AccountRegistration 
+
+//Авторизация Post json
+http://localhost:59856//api/Account/Authorization
