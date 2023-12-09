@@ -1,6 +1,6 @@
 ﻿using System.Text.Json;
 using TaskList_Frontend.Services.TaskListApi.Configs;
-using TaskList_Frontend.Services.TaskListApi.Models;
+using TaskList_Frontend.Services.TaskListApi.Models.Account;
 
 namespace TaskList_Frontend.Services.TaskListApi.Controllers
 {
@@ -15,7 +15,6 @@ namespace TaskList_Frontend.Services.TaskListApi.Controllers
             _httpClient = client;
             
         }
-
 
         public async void AccountRegistration(UserRegistrationModel userRegistrationModel)
         {

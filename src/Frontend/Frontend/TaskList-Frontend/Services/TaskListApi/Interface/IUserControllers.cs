@@ -1,10 +1,10 @@
-﻿using TaskList_Frontend.Services.TaskListApi.Models;
+﻿using TaskList_Frontend.Services.TaskListApi.Models.Account;
 
 namespace TaskList_Frontend.Services.TaskListApi.Interface
 {
     public interface IUserControllers
     {
-        Task<string> Registration(UserRegistrationModel userRegistration);
-        Task<string> Authorization(UserAuthorizationModel userAuthorization);
+        void AccountRegistration(UserRegistrationModel userRegistration);
+        void Authorization(UserAuthorizationModel userAuthorization);
     }
 }

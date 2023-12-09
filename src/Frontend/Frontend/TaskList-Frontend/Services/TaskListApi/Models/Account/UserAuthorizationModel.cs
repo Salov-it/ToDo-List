@@ -1,4 +1,4 @@
-﻿namespace TaskList_Frontend.Services.TaskListApi.Models
+﻿namespace TaskList_Frontend.Services.TaskListApi.Models.Account
 {
     public class UserAuthorizationModel
     {
