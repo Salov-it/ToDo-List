@@ -13,3 +13,4 @@ C:\Users\Администратор.VDSWIN2K16\Desktop\Githab\ToDo-List\src\Back
 C:\Users\Администратор.VDSWIN2K16\Desktop\Githab\ToDo-List\src\Backend\ToDoList-Backend\DatabasePostgres.Persistance\obj\Debug\net7.0\refint\DatabasePostgres.Persistance.dll
 C:\Users\Администратор.VDSWIN2K16\Desktop\Githab\ToDo-List\src\Backend\ToDoList-Backend\DatabasePostgres.Persistance\obj\Debug\net7.0\DatabasePostgres.Persistance.pdb
 C:\Users\Администратор.VDSWIN2K16\Desktop\Githab\ToDo-List\src\Backend\ToDoList-Backend\DatabasePostgres.Persistance\obj\Debug\net7.0\ref\DatabasePostgres.Persistance.dll
+C:\Users\Администратор.VDSWIN2K16\Desktop\Githab\ToDo-List\src\Backend\ToDoList-Backend\DatabasePostgres.Persistance\obj\Debug\net7.0\DatabasePostgres.Persistance.sourcelink.json
