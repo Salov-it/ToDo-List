@@ -15,8 +15,9 @@ namespace TaskList_Frontend.Controllers
         [HttpGet]
         public ActionResult Index()
         {
-            var Content = _taskListControllers.GetAllTaskList();
-            return View(Content);
+            //var Content = _taskListControllers.GetAllTaskList();
+           
+            return View();
         }
 
         // GET: TaskListController/Details/5
