@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "CCbprl68O8PZDf93REY8JiP0JWsi6PbiKzA9+HGw+stjqBGsVmbNKmKdk29FLnG791MG6O+eNzVT80F+XVlMTw==",
+  "dgSpecHash": "MlMBtigaI4y0CV2LM6/megKfsnnFs39wlZA41hwZfpvPiI6UPcBemPXjW186eq7OLyDLTr1jhI4aPoyMnVSLmQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Администратор.VDSWIN2K16\\Desktop\\Githab\\ToDo-List\\src\\Backend\\ToDoList-Backend\\DatabasePostgres.Persistance\\DatabasePostgres.Persistance.csproj",
   "expectedPackageFiles": [
@@ -8,10 +8,7 @@
     "C:\\Users\\Администратор.VDSWIN2K16\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
     "C:\\Users\\Администратор.VDSWIN2K16\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\Администратор.VDSWIN2K16\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512",
-    "C:\\Users\\Администратор.VDSWIN2K16\\.nuget\\packages\\npgsql\\7.0.6\\npgsql.7.0.6.nupkg.sha512",
-    "C:\\Users\\Администратор.VDSWIN2K16\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.14\\microsoft.windowsdesktop.app.ref.7.0.14.nupkg.sha512",
-    "C:\\Users\\Администратор.VDSWIN2K16\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.14\\microsoft.netcore.app.ref.7.0.14.nupkg.sha512",
-    "C:\\Users\\Администратор.VDSWIN2K16\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.14\\microsoft.aspnetcore.app.ref.7.0.14.nupkg.sha512"
+    "C:\\Users\\Администратор.VDSWIN2K16\\.nuget\\packages\\npgsql\\7.0.6\\npgsql.7.0.6.nupkg.sha512"
   ],
   "logs": []
 }

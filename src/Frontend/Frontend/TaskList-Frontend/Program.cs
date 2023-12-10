@@ -1,8 +1,12 @@
+using TaskList_Frontend.Services.TaskListApi.Controllers;
+using TaskList_Frontend.Services.TaskListApi.Interface;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddHttpClient();
+builder.Services.AddScoped<IUserControllers, UserControllers>();
 
 var app = builder.Build();
 

@@ -1,20 +1,17 @@
-﻿using System.Text.Json;
+﻿using System.Text;
+using System.Text.Json;
 using TaskList_Frontend.Services.TaskListApi.Configs;
+using TaskList_Frontend.Services.TaskListApi.Interface;
 using TaskList_Frontend.Services.TaskListApi.Models.Account;
 
 namespace TaskList_Frontend.Services.TaskListApi.Controllers
 {
-    public class UserControllers
+    public class UserControllers : IUserControllers
     {
-        private readonly HttpClient _httpClient;
+        
+        HttpClient client = new HttpClient();
 
         Config config = new Config();
-
-        public UserControllers(HttpClient client)
-        {
-            _httpClient = client;
-            
-        }
 
         public async void AccountRegistration(UserRegistrationModel userRegistrationModel)
         {
@@ -25,7 +22,8 @@ namespace TaskList_Frontend.Services.TaskListApi.Controllers
                 email = userRegistrationModel.email,
             };
             string Content = JsonSerializer.Serialize(UserContent);
-            using var Resuilt = await _httpClient.PostAsJsonAsync(config.AccountRegistration,Content);
+            var content = new StringContent(Content, Encoding.UTF8, "application/json");
+            using var Resuilt = await client.PostAsync(config.AccountRegistration,content);
         }
 
         public async void Authorization(UserAuthorizationModel userAuthorization)
@@ -36,7 +34,8 @@ namespace TaskList_Frontend.Services.TaskListApi.Controllers
                 Password = userAuthorization.Password,
             };
             string Content = JsonSerializer.Serialize(UserContent);
-            using var Resuilt = await _httpClient.PostAsJsonAsync(config.Authorization, Content);
+            var content = new StringContent(Content, Encoding.UTF8, "application/json");
+            using var Resuilt = await client.PostAsync(config.Authorization,content);
         }
     }
 }
