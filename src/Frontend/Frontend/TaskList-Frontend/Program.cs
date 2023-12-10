@@ -6,7 +6,10 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddHttpClient();
+
 builder.Services.AddScoped<IUserControllers, UserControllers>();
+
+builder.Services.AddScoped<ITaskListControllers, TaskListControllers>();
 
 var app = builder.Build();
 
@@ -36,5 +39,9 @@ app.MapControllerRoute(
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Account}/{action=Authorization}");
+
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=TaskList}/{action=Index}");
 
 app.Run();
