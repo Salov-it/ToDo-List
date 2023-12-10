@@ -26,16 +26,19 @@ namespace TaskList_Frontend.Services.TaskListApi.Controllers
             using var Resuilt = await client.PostAsync(config.AccountRegistration,content);
         }
 
-        public async void Authorization(UserAuthorizationModel userAuthorization)
+        public async Task<string> Authorization(UserAuthorizationModel userAuthorization)
         {
             UserAuthorizationModel UserContent = new UserAuthorizationModel
             {
                 Login = userAuthorization.Login,
                 Password = userAuthorization.Password,
             };
+
             string Content = JsonSerializer.Serialize(UserContent);
             var content = new StringContent(Content, Encoding.UTF8, "application/json");
             using var Resuilt = await client.PostAsync(config.Authorization,content);
+            var jwtToken = Resuilt.Content.ReadAsStringAsync();
+            return jwtToken.Result;
         }
     }
 }
