@@ -7,29 +7,20 @@ namespace TaskList_Frontend.Controllers
     public class TaskListController : Controller
     {
         private readonly ITaskListControllers _taskListControllers;
+        List<TaskViewModel> _tasks = new List<TaskViewModel>();
 
         public TaskListController(ITaskListControllers taskListControllers)
         {
             _taskListControllers = taskListControllers;
         }
 
-        
+        [HttpGet]
         public ActionResult Index()
         {
-            //var Content = _taskListControllers.GetAllTaskList();
-            DateTime localDateTime = DateTime.Now;
-            TaskViewModel task = new TaskViewModel
-            {
-                id =1,
-                text = "БОБ СУЙ",
-                statusTasks = true,
-                created = localDateTime
-            };
-            List<TaskViewModel> taskList = new List<TaskViewModel>();
-            
-            taskList.Add(task);
+            var Content = _taskListControllers.GetAllTaskList();
            
-            return View(taskList);
+            _tasks.Add(Content.Result);
+            return View(_tasks);
         }
 
         [HttpPost]

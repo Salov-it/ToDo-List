@@ -49,7 +49,7 @@ namespace TaskList_Frontend.Controllers
                 Secure = true, // Рекомендуется использовать только по HTTPS
                 SameSite = SameSiteMode.Strict,
             };
-            Response.Cookies.Append("AccessToken", Token.JwtToken,cookieOptions);
+            Response.Cookies.Append("AccessToken",Token.JwtToken,cookieOptions);
             return RedirectToAction("Index", "Home");
         }  
     }

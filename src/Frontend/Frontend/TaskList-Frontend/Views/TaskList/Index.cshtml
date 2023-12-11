@@ -32,12 +32,13 @@
            {
              <tr>
                <td>@task.id</td>
-               <td>@task.text</td>
+               <td>@task.text@task.eror</td>
                <td>@(task.statusTasks ? "Активно" : "Неактивно")</td>
                <td>@task.created</td>
              </tr>
            }
         }
+        
       </tbody>
     </table>
   </body>
