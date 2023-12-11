@@ -1,4 +1,5 @@
-﻿@page
+﻿@using TaskList_Frontend.Services.TaskListApi.Models.TaskList;
+@model List<TaskViewModel>
 
 
 <!DOCTYPE html>
@@ -10,28 +11,38 @@
     <title>Список задач</title>
 </head>
      <body>
-     <h1>Список задач</h1>
-
-     <form id="taskForm">
-        <label for="taskId">ID:</label>
-        <input type="text" id="taskId" name="taskId">
-
-        <label for="taskText">Текст:</label>
-        <input type="text" id="taskText" name="taskText">
-
-        <label for="taskStatus">Статус:</label>
-        <input type="text" id="taskStatus" name="taskStatus">
-
-        <label for="taskCreated">Дата создания:</label>
-        <input type="text" id="taskCreated" name="taskCreated">
-
-        <button type="button" onclick="addTask()">Добавить задачу</button>
+            
+     <form asp-controller="TaskList" asp-action="Index" method="post" id="taskForm">
+        <button type="submit">Добавить новую задачу</button>
      </form>
 
-     <div id="taskList">
-        <!-- Список задач будет отображаться здесь -->
-     </div>
+             <table id="taskList">
+             <thead>
+             <tr>
+                <th>ID</th>
+                <th>Текст</th>
+                <th>Статус</th>
+                <th>Дата</th>
+             </tr>
+             </thead>
+             <tbody>
+             @if (Model != null)
+             {
+                foreach (var task in Model)
+                 {
+                     <tr>
+                        <td>@task.id</td>
+                        <td>@task.text</td>
+                        <td>@(task.statusTasks ? "Активно" : "Неактивно")</td>
+                        <td>@task.created</td>
+                     </tr>
+                 }
+             }
+             </tbody>
+             </table>
 
+     
+     
      </body>
 </html>
 

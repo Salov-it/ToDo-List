@@ -6,7 +6,7 @@
         public string text { get; set; }
         public bool statusTasks { get; set; }
         public DateTime created { get; set; }
-        public string eror { get; set; }
+        //public string eror { get; set; }
 
     }
 }
