@@ -28,23 +28,8 @@ namespace TaskList_Frontend.Controllers
             List<TaskViewModel> taskList = new List<TaskViewModel>();
             
             taskList.Add(task);
-            
-          
-            
+           
             return View(taskList);
-        }
-
-        private IEnumerable<TaskViewModel> GetTasks()
-        {
-            DateTime localDateTime = DateTime.Now;
-            bool yes = true;
-            // Здесь получите свои данные задач (например, из базы данных)
-            // Возвращаем простой пример для демонстрации
-            return new List<TaskViewModel>
-            {
-             new TaskViewModel{id = 1,text = "супер бобер",statusTasks = yes,created =  localDateTime}
-               // Добавьте свои задачи в коллекцию
-            };
         }
 
         [HttpPost]

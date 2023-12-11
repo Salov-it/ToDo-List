@@ -10,40 +10,37 @@
      <link rel="stylesheet" href="../css/TaskListIndex.css">
     <title>Список задач</title>
 </head>
-     <body>
+  <body>
             
-     <form asp-controller="TaskList" asp-action="Index" method="post" id="taskForm">
+    <form asp-controller="TaskList" asp-action="Index" method="post" id="taskForm">
         <button type="submit">Добавить новую задачу</button>
      </form>
 
-             <table id="taskList">
-             <thead>
+    <table id="taskList">
+      <thead>
+         <tr>
+           <th>ID</th>
+           <th>Текст</th>
+           <th>Статус</th>
+           <th>Дата</th>
+           </tr>
+      </thead>
+      <tbody>
+        @if (Model != null)
+        {
+           foreach (var task in Model)
+           {
              <tr>
-                <th>ID</th>
-                <th>Текст</th>
-                <th>Статус</th>
-                <th>Дата</th>
+               <td>@task.id</td>
+               <td>@task.text</td>
+               <td>@(task.statusTasks ? "Активно" : "Неактивно")</td>
+               <td>@task.created</td>
              </tr>
-             </thead>
-             <tbody>
-             @if (Model != null)
-             {
-                foreach (var task in Model)
-                 {
-                     <tr>
-                        <td>@task.id</td>
-                        <td>@task.text</td>
-                        <td>@(task.statusTasks ? "Активно" : "Неактивно")</td>
-                        <td>@task.created</td>
-                     </tr>
-                 }
-             }
-             </tbody>
-             </table>
-
-     
-     
-     </body>
+           }
+        }
+      </tbody>
+    </table>
+  </body>
 </html>
 
 
