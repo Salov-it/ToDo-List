@@ -21,8 +21,14 @@ namespace TaskList_Frontend.Controllers
             return View(Content);
         }
 
+        [HttpGet]
+        public ActionResult TaskListAdd()
+        {
+            return View();
+        }
+
         [HttpPost]
-        public ActionResult CreateTaskList(TaskViewModel taskViewModel)
+        public ActionResult TaskListAdd(TaskViewModel taskViewModel)
         {
             return View();
         }

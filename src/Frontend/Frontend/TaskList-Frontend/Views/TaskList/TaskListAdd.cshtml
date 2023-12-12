@@ -1,0 +1,22 @@
+﻿
+@page
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/TaskListIndex.css">
+    <title>Добавление задачи</title>
+</head>
+<body>
+    <h2>Добавление задачи</h2>
+    
+    <form asp-controller="TaskList" asp-action="TaskListAdd" method="post id="taskForm">
+        <label for="taskText">Текст задачи:</label>
+        <input type="text" id="taskText" name="taskText" required />
+        
+        <button type="submit">Добавить задачу</button>
+    </form>
+    </body>
+    </html>
