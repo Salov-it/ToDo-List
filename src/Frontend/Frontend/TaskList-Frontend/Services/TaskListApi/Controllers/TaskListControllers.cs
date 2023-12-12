@@ -1,5 +1,4 @@
-﻿using System;
-using System.Net.Http.Headers;
+﻿using System.Net.Http.Headers;
 using System.Text.Json;
 using TaskList_Frontend.Services.TaskListApi.Configs;
 using TaskList_Frontend.Services.TaskListApi.Interface;
@@ -29,5 +28,11 @@ namespace TaskList_Frontend.Services.TaskListApi.Controllers
            
             return Content;
         }
+
+        public async Task<TaskListAddModel> TaskListAdd(TaskListAddModel taskListAdd)
+        {
+            return  taskListAdd;
+        }
+
     }
 }
