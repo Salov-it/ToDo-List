@@ -1,5 +1,6 @@
-﻿using Newtonsoft.Json;
+﻿using System;
 using System.Net.Http.Headers;
+using System.Text.Json;
 using TaskList_Frontend.Services.TaskListApi.Configs;
 using TaskList_Frontend.Services.TaskListApi.Interface;
 using TaskList_Frontend.Services.TaskListApi.Models.TaskList;
@@ -18,22 +19,15 @@ namespace TaskList_Frontend.Services.TaskListApi.Controllers
             _ContextAccessor = ContextAccessor;
         }
         Config config = new Config();
-        public async Task <TaskViewModel> GetAllTaskList()
+        public async Task<List<TaskViewModel>> GetAllTaskList()
         {
             string Token = _ContextAccessor.HttpContext.Request.Cookies["AccessToken"];
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", Token);
             using var Resuilt = await client.GetAsync(config.GetAllTaskList);
             var ContentJson = Resuilt.Content.ReadAsStringAsync();
-            var Content = JsonConvert.DeserializeObject<TaskViewModel>(ContentJson.Result);
-            TaskViewModel taskView = new TaskViewModel
-            {
-                id = Content.id,
-                text = Content.text,
-                statusTasks = Content.statusTasks,
-                created = Content.created,
-                eror = Content.eror
-            };
-            return taskView;
+            var Content = JsonSerializer.Deserialize<List<TaskViewModel>>(ContentJson.Result);
+           
+            return Content;
         }
     }
 }

@@ -4,6 +4,6 @@ namespace TaskList_Frontend.Services.TaskListApi.Interface
 {
     public interface ITaskListControllers
     {
-        Task<TaskViewModel> GetAllTaskList();
+        Task<List<TaskViewModel>> GetAllTaskList();
     }
 }

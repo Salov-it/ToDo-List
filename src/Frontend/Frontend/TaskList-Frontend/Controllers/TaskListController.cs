@@ -15,12 +15,10 @@ namespace TaskList_Frontend.Controllers
         }
 
         [HttpGet]
-        public ActionResult Index()
+        public async Task<ActionResult> Index()
         {
-            var Content = _taskListControllers.GetAllTaskList();
-           
-            _tasks.Add(Content.Result);
-            return View(_tasks);
+            var Content = await _taskListControllers.GetAllTaskList();
+            return View(Content);
         }
 
         [HttpPost]
