@@ -28,9 +28,16 @@ namespace TaskList_Frontend.Controllers
         }
 
         [HttpPost]
-        public ActionResult TaskListAdd(TaskViewModel taskViewModel)
+        public async Task<ActionResult> TaskListAdd(TaskListAddModel taskListAdd)
         {
-            return View();
+            TaskListAddModel taskList = new TaskListAddModel
+            {
+                Text = taskListAdd.Text,
+                StatusTasks = true
+            };
+            var Content = await _taskListControllers.TaskListAdd(taskList);
+
+            return View(Content);
         }
 
        
