@@ -12,12 +12,13 @@ namespace TaskList_Frontend.Services.TaskListApi.Controllers
         HttpClient client = new HttpClient();
         HttpContext context = new DefaultHttpContext();
         List<TaskViewModel> content = new List<TaskViewModel>();
+        Config config = new Config();
 
         public TaskListControllers(IHttpContextAccessor ContextAccessor)
         {
             _ContextAccessor = ContextAccessor;
         }
-        Config config = new Config();
+       
         public async Task<List<TaskViewModel>> GetAllTaskList()
         {
             string Token = _ContextAccessor.HttpContext.Request.Cookies["AccessToken"];
@@ -25,7 +26,6 @@ namespace TaskList_Frontend.Services.TaskListApi.Controllers
             using var Resuilt = await client.GetAsync(config.GetAllTaskList);
             var ContentJson = Resuilt.Content.ReadAsStringAsync();
             var Content = JsonSerializer.Deserialize<List<TaskViewModel>>(ContentJson.Result);
-           
             return Content;
         }
 
