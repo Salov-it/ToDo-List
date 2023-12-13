@@ -16,7 +16,7 @@ namespace TaskListServices.Application.CQRS.Command.GetAll
         public async Task<List<GetAllTaskListDto>> GetAll()
         {
             var Content = await _taskListRepositoryPostgres.GetAll();
-            if(Content.Count < 0) 
+            if(Content.Count > 0) 
             {
                 return Content;
             }
