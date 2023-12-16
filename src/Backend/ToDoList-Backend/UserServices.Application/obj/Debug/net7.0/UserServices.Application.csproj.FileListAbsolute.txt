@@ -15,3 +15,4 @@ C:\Users\Администратор.VDSWIN2K16\Desktop\Githab\ToDo-List\src\Back
 C:\Users\Администратор.VDSWIN2K16\Desktop\Githab\ToDo-List\src\Backend\ToDoList-Backend\UserServices.Application\obj\Debug\net7.0\refint\UserServices.Application.dll
 C:\Users\Администратор.VDSWIN2K16\Desktop\Githab\ToDo-List\src\Backend\ToDoList-Backend\UserServices.Application\obj\Debug\net7.0\UserServices.Application.pdb
 C:\Users\Администратор.VDSWIN2K16\Desktop\Githab\ToDo-List\src\Backend\ToDoList-Backend\UserServices.Application\obj\Debug\net7.0\ref\UserServices.Application.dll
+C:\Users\Администратор.VDSWIN2K16\Desktop\Githab\ToDo-List\src\Backend\ToDoList-Backend\UserServices.Application\obj\Debug\net7.0\UserServices.Application.sourcelink.json
