@@ -30,7 +30,7 @@ namespace TaskList_Frontend.Services.TaskListApi.Controllers
             return Content;
         }
 
-        public async Task<TaskListAddModel> TaskListAdd(TaskListAddModel taskListAdd)
+        public async Task<string> TaskListAdd(TaskListAddModel taskListAdd)
         {
             string Token = _ContextAccessor.HttpContext.Request.Cookies["AccessToken"];
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", Token);
@@ -40,7 +40,8 @@ namespace TaskList_Frontend.Services.TaskListApi.Controllers
             var Content = new StringContent(Json, Encoding.UTF8, "application/json");
             using var Resuilt = await client.PostAsync(config.TaskListAdd,Content);
             var ContentJson = Resuilt.Content.ReadAsStringAsync();
-            return  taskListAdd;
+            
+            return  ContentJson;
         }
 
     }

@@ -5,6 +5,6 @@ namespace TaskList_Frontend.Services.TaskListApi.Interface
     public interface ITaskListControllers
     {
         Task<List<TaskViewModel>> GetAllTaskList();
-        Task<TaskListAddModel> TaskListAdd(TaskListAddModel taskListAdd);
+        Task<string> TaskListAdd(TaskListAddModel taskListAdd);
     }
 } 
