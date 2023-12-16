@@ -1,4 +1,5 @@
 ﻿using System.Net.Http.Headers;
+using System.Text;
 using System.Text.Json;
 using TaskList_Frontend.Services.TaskListApi.Configs;
 using TaskList_Frontend.Services.TaskListApi.Interface;
@@ -31,6 +32,14 @@ namespace TaskList_Frontend.Services.TaskListApi.Controllers
 
         public async Task<TaskListAddModel> TaskListAdd(TaskListAddModel taskListAdd)
         {
+            string Token = _ContextAccessor.HttpContext.Request.Cookies["AccessToken"];
+            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", Token);
+
+            var Json = JsonSerializer.Serialize<TaskListAddModel>(taskListAdd);
+
+            var Content = new StringContent(Json, Encoding.UTF8, "application/json");
+            using var Resuilt = await client.PostAsync(config.TaskListAdd,Content);
+            var ContentJson = Resuilt.Content.ReadAsStringAsync();
             return  taskListAdd;
         }
 

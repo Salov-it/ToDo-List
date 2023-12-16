@@ -50,7 +50,7 @@ namespace TaskList_Frontend.Controllers
                 SameSite = SameSiteMode.Strict,
             };
             Response.Cookies.Append("AccessToken",Token.JwtToken,cookieOptions);
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Index", "TaskList");
         }  
     }
 }
