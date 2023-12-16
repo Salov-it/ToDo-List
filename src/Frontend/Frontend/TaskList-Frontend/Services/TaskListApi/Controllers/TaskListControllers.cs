@@ -41,7 +41,7 @@ namespace TaskList_Frontend.Services.TaskListApi.Controllers
             using var Resuilt = await client.PostAsync(config.TaskListAdd,Content);
             var ContentJson = Resuilt.Content.ReadAsStringAsync();
             
-            return  ContentJson;
+            return  ContentJson.Result;
         }
 
     }
