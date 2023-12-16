@@ -36,10 +36,21 @@ namespace TaskList_Frontend.Controllers
                 StatusTasks = true
             };
             var Content = await _taskListControllers.TaskListAdd(taskList);
-
-            return View(Content);
+            TaskListStatusModel taskListStatus = new TaskListStatusModel { Status = Content.Status };
+            if(taskListStatus.Status == "Выполнено")
+            {
+                return RedirectToAction("Status", "TaskList");
+            }
+            else { Console.WriteLine("Ошибка: Добавления задачи"); }
+            return View();
         }
 
-       
+        [HttpGet]
+        public async Task<ActionResult> Status()
+        {
+            return View();
+        }
+
+        
     }
 }
