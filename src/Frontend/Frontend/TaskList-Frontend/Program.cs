@@ -53,5 +53,9 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=TaskList}/{action=Status}");
 
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=TaskList}/{action=StatusEror}");
+
 
 app.Run();

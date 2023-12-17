@@ -41,7 +41,7 @@ namespace TaskList_Frontend.Controllers
             {
                 return RedirectToAction("Status", "TaskList");
             }
-            else { Console.WriteLine("Ошибка: Добавления задачи"); }
+            else { return RedirectToAction("StatusEror", "TaskList"); }
             return View();
         }
 
@@ -51,6 +51,12 @@ namespace TaskList_Frontend.Controllers
             return View();
         }
 
-        
+        [HttpGet]
+        public async Task<ActionResult> StatusEror()
+        {
+            return View();
+        }
+
+
     }
 }
