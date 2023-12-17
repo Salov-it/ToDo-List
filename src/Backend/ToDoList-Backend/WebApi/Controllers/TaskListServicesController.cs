@@ -11,7 +11,7 @@ namespace WebApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    //[Authorize(Roles = "User")]
+    [Authorize(Roles = "User")]
     public class TaskListServicesController : ControllerBase
     {
         private readonly IMediator mediator;

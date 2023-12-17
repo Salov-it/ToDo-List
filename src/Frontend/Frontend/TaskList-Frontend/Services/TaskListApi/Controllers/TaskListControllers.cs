@@ -25,8 +25,8 @@ namespace TaskList_Frontend.Services.TaskListApi.Controllers
             string Token = _ContextAccessor.HttpContext.Request.Cookies["AccessToken"];
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", Token);
             using var Resuilt = await client.GetAsync(config.GetAllTaskList);
-            var ContentJson = Resuilt.Content.ReadAsStringAsync();
-            var Content = JsonSerializer.Deserialize<List<TaskViewModel>>(ContentJson.Result);
+            var ContentJson = await Resuilt.Content.ReadAsStringAsync();
+            var Content =  JsonSerializer.Deserialize<List<TaskViewModel>>(ContentJson);
             return Content;
         }
 
