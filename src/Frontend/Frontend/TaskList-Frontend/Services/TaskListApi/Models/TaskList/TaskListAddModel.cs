@@ -4,5 +4,6 @@
     {
         public string Text { get; set; }
         public bool StatusTasks { get; set; }
+        public DateTime Created { get; set; }
     }
 }

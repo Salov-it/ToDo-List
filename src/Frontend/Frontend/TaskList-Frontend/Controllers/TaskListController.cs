@@ -30,10 +30,12 @@ namespace TaskList_Frontend.Controllers
         [HttpPost]
         public async Task<ActionResult> TaskListAdd(TaskListAddModel taskListAdd)
         {
+            DateTime DateTime = DateTime.Now;
             TaskListAddModel taskList = new TaskListAddModel
             {
                 Text = taskListAdd.Text,
-                StatusTasks = true
+                StatusTasks = true,
+                Created = DateTime
             };
             var Content = await _taskListControllers.TaskListAdd(taskList);
             TaskListStatusModel taskListStatus = new TaskListStatusModel { Status = Content.Status };

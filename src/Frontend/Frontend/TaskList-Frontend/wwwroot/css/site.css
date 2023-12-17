@@ -4,7 +4,6 @@ body {
     flex-direction: column; /* Adjust to column layout */
     align-items: center;
     justify-content: center;
-    height: 100vh;
     margin: 0;
     overflow-y: auto; /* Vertical scrolling */
 }
