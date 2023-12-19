@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DatabasePostgres.Persistance")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f5ef94c5b140388bc722195611f4e62c0e43ebc2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+864f44d8bc5cf71c682200b0fd5e3b35be3f61af")]
 [assembly: System.Reflection.AssemblyProductAttribute("DatabasePostgres.Persistance")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DatabasePostgres.Persistance")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

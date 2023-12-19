@@ -38,12 +38,27 @@ namespace TaskList_Frontend.Services.TaskListApi.Controllers
             var Json = JsonSerializer.Serialize<TaskListAddModel>(taskListAdd);
 
             var Content = new StringContent(Json, Encoding.UTF8, "application/json");
-            using var Resuilt = await client.PostAsync(config.TaskListAdd,Content);
+            using var Resuilt = await client.PostAsync(config.TaskListAdd, Content);
             var ContentJson = Resuilt.Content.ReadAsStringAsync();
-            TaskListStatusModel taskListStatus = new TaskListStatusModel { Status = ContentJson.Result };  
+            TaskListStatusModel taskListStatus = new TaskListStatusModel { Status = ContentJson.Result };
 
             return taskListStatus;
         }
+
+        public async Task<string> ChangeTask(ChangeTaskListModel changeTaskList)
+        {
+            string Token = _ContextAccessor.HttpContext.Request.Cookies["AccessToken"];
+            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", Token);
+
+            var JsonContent = JsonSerializer.Serialize<ChangeTaskListModel>(changeTaskList);
+
+            var Content = new StringContent(JsonContent, Encoding.UTF8, "application/json");
+
+            using var Resuilt = await client.PutAsync(config.ChangeTask,Content);
+            var ResuiltJson = await Resuilt.Content.ReadAsStringAsync();
+            return ResuiltJson;
+        }
+
 
     }
 }

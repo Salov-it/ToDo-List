@@ -9,5 +9,6 @@
         //TaskList
         public string GetAllTaskList = "https://localhost:44319/api/TaskListServices/GetAll";
         public string TaskListAdd = "https://localhost:44319/api/TaskListServices/Add";
+        public string ChangeTask = "https://localhost:44319/api/TaskListServices/Update";
     } 
 }

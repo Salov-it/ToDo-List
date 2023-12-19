@@ -1,0 +1,28 @@
+﻿@page
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/TaskListIndex.css">
+    <title>Изменить Задачу</title>
+</head>
+<body>
+    <h2>Изменить Задачу</h2>
+
+    <form action="ChangeTask" method="post" id="taskForm">
+        <label for="taskText">id задачи:</label>
+        <input type="text" id="taskText" name="id" required />
+
+        <label for="taskText">Текст задачи:</label>
+        <input type="text" id="taskText" name="text" required />
+
+        <button type="submit">Изменить задачу</button>
+
+    </form>
+   
+</body>
+</html>
+
+

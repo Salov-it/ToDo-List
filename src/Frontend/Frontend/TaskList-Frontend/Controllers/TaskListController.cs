@@ -48,7 +48,21 @@ namespace TaskList_Frontend.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult> Status()
+        public async Task<ActionResult> ChangeTask()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<ActionResult> ChangeTask(ChangeTaskListModel changeTaskListModel)
+        {
+            return View();
+        }
+
+
+
+        [HttpGet]
+        public async Task<ActionResult> Status() 
         {
             return View();
         }
