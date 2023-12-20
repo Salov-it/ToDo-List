@@ -55,8 +55,16 @@ namespace TaskList_Frontend.Services.TaskListApi.Controllers
             var Content = new StringContent(JsonContent, Encoding.UTF8, "application/json");
 
             using var Resuilt = await client.PutAsync(config.ChangeTask,Content);
-            var ResuiltJson = await Resuilt.Content.ReadAsStringAsync();
-            return ResuiltJson;
+            var ResuiltStatusCode =  Resuilt.StatusCode.ToString();
+
+            if(ResuiltStatusCode != "200")
+            {
+                return "Выполнено";
+            }
+            else
+            {
+                return "Ошибка заметка не изменена";
+            }
         }
 
 

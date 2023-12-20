@@ -44,7 +44,6 @@ namespace TaskList_Frontend.Controllers
                 return RedirectToAction("Status", "TaskList");
             }
             else { return RedirectToAction("StatusEror", "TaskList"); }
-            return View();
         }
 
         [HttpGet]
@@ -56,7 +55,20 @@ namespace TaskList_Frontend.Controllers
         [HttpPost]
         public async Task<ActionResult> ChangeTask(ChangeTaskListModel changeTaskListModel)
         {
-            return View();
+            ChangeTaskListModel changeTaskList = new ChangeTaskListModel
+            {
+                id = changeTaskListModel.id,
+                text = changeTaskListModel.text,
+                StatusTasks = true,
+                Eror = "null"
+            };
+            var Content = await _taskListControllers.ChangeTask(changeTaskList);
+           
+            if(Content != "200")
+            {
+                return RedirectToAction("Status", "TaskList");
+            }
+            else { return RedirectToAction("StatusEror", "TaskList"); }
         }
 
 
