@@ -64,11 +64,12 @@ namespace TaskList_Frontend.Controllers
             };
             var Content = await _taskListControllers.ChangeTask(changeTaskList);
            
-            if(Content != "200")
+            if(Content == "200")
             {
                 return RedirectToAction("Status", "TaskList");
             }
-            else { return RedirectToAction("StatusEror", "TaskList"); }
+            else { return RedirectToAction("StatusEror", "TaskList"); };
+            
         }
 
 
