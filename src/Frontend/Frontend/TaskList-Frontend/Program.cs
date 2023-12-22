@@ -61,5 +61,9 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=TaskList}/{action=ChangeTask}");
 
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=TaskList}/{action=Delet}");
+
 
 app.Run();

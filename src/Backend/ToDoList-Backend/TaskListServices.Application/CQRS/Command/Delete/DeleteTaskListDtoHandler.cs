@@ -15,7 +15,7 @@ namespace TaskListServices.Application.CQRS.Command.Delete
             var Content = await _deletTaskList.Delete(request.deleteTaskListDto);
             if(Content != null)
             {
-                return Content;
+                return "200";
             }
             else
             {

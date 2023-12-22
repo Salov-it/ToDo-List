@@ -68,11 +68,8 @@ namespace TaskList_Frontend.Controllers
             {
                 return RedirectToAction("Status", "TaskList");
             }
-            else { return RedirectToAction("StatusEror", "TaskList"); };
-            
+            else { return RedirectToAction("StatusEror", "TaskList"); };  
         }
-
-
 
         [HttpGet]
         public async Task<ActionResult> Status() 
@@ -85,6 +82,25 @@ namespace TaskList_Frontend.Controllers
         {
             return View();
         }
+
+        [HttpGet]
+        public async Task<ActionResult> Delet()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<ActionResult> Delet(TaskListDeleteModel taskListDelete)
+        {
+            var Content = await _taskListControllers.Delete(taskListDelete);
+
+            if (Content == "OK")
+            {
+                return RedirectToAction("Status", "TaskList");
+            }
+            else { return RedirectToAction("StatusEror", "TaskList"); };
+        }
+
 
 
     }

@@ -1,4 +1,5 @@
 ﻿using System.Net.Http.Headers;
+using System.Net.Http.Json;
 using System.Text;
 using System.Text.Json;
 using TaskList_Frontend.Services.TaskListApi.Configs;
@@ -69,6 +70,35 @@ namespace TaskList_Frontend.Services.TaskListApi.Controllers
             {
                 return "500";
             }  
+        }
+
+        public async Task<string> Delete(TaskListDeleteModel taskListDeleteModel)
+        {
+            string Token = _ContextAccessor.HttpContext.Request.Cookies["AccessToken"];
+            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", Token);
+
+            var JsonContent = JsonSerializer.Serialize<TaskListDeleteModel>(taskListDeleteModel);
+
+            var Content = new StringContent(JsonContent, Encoding.UTF8, "application/json");
+
+            try
+            {
+                using var Resuilt = new HttpRequestMessage(HttpMethod.Delete, config.Delete)
+                {
+                    Content = Content
+                };
+                using var response = await client.SendAsync(Resuilt);
+                return response.StatusCode.ToString();
+            }
+            catch (HttpRequestException ex)
+            {
+                // Логирование ошибки
+                return "500";
+            }
+            catch (Exception ex)
+            {
+                return "500";
+            }
         }
     }
 }

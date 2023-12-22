@@ -7,5 +7,6 @@ namespace TaskList_Frontend.Services.TaskListApi.Interface
         Task<List<TaskViewModel>> GetAllTaskList();
         Task<TaskListStatusModel> TaskListAdd(TaskListAddModel taskListAdd);
         Task<string> ChangeTask(ChangeTaskListModel changeTaskList);
+        Task<string> Delete(TaskListDeleteModel taskListDeleteModel);
     }
 } 
