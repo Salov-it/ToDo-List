@@ -2,7 +2,8 @@
 {
     public class TaskListAddModel
     {
-        public string Text { get; set; }
+        public string NickName { get; set; }
+        public string text { get; set; }
         public bool StatusTasks { get; set; }
         public DateTime Created { get; set; }
     }

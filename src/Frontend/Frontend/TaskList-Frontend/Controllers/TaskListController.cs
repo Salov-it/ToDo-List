@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 using TaskList_Frontend.Services.TaskListApi.Interface;
 using TaskList_Frontend.Services.TaskListApi.Models.TaskList;
 
@@ -30,15 +31,10 @@ namespace TaskList_Frontend.Controllers
         [HttpPost]
         public async Task<ActionResult> TaskListAdd(TaskListAddModel taskListAdd)
         {
-            DateTime DateTime = DateTime.Now;
-            TaskListAddModel taskList = new TaskListAddModel
-            {
-                Text = taskListAdd.Text,
-                StatusTasks = true,
-                Created = DateTime
-            };
-            var Content = await _taskListControllers.TaskListAdd(taskList);
+            var Content = await _taskListControllers.TaskListAdd(taskListAdd);
+
             TaskListStatusModel taskListStatus = new TaskListStatusModel { Status = Content.Status };
+
             if(taskListStatus.Status == "Выполнено")
             {
                 return RedirectToAction("Status", "TaskList");

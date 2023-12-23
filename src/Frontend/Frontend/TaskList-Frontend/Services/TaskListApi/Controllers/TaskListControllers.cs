@@ -1,10 +1,13 @@
 ﻿using System.Net.Http.Headers;
 using System.Net.Http.Json;
 using System.Text;
+using System.IdentityModel.Tokens.Jwt;
 using System.Text.Json;
 using TaskList_Frontend.Services.TaskListApi.Configs;
 using TaskList_Frontend.Services.TaskListApi.Interface;
 using TaskList_Frontend.Services.TaskListApi.Models.TaskList;
+using Newtonsoft.Json.Linq;
+using System.Security.Claims;
 
 namespace TaskList_Frontend.Services.TaskListApi.Controllers
 {
@@ -35,8 +38,22 @@ namespace TaskList_Frontend.Services.TaskListApi.Controllers
         {
             string Token = _ContextAccessor.HttpContext.Request.Cookies["AccessToken"];
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", Token);
+            
+            DateTime DateTime = DateTime.Now;
 
-            var Json = JsonSerializer.Serialize<TaskListAddModel>(taskListAdd);
+            var handler = new JwtSecurityTokenHandler();
+            var jsonToken = handler.ReadToken(Token) as JwtSecurityToken;
+
+            var UserName = jsonToken.Claims.FirstOrDefault(claim => claim.Type == "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name");
+
+            TaskListAddModel taskList = new TaskListAddModel
+            {
+                NickName = UserName.Value,
+                text = taskListAdd.text,
+                StatusTasks = true,
+                Created = DateTime
+            };
+            var Json = JsonSerializer.Serialize<TaskListAddModel>(taskList);
 
             var Content = new StringContent(Json, Encoding.UTF8, "application/json");
             using var Resuilt = await client.PostAsync(config.TaskListAdd, Content);
