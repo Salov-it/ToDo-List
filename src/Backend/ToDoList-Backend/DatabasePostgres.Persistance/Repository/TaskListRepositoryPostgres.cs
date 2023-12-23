@@ -17,6 +17,7 @@ namespace DatabasePostgres.Persistance.Repository
             {
                 Parameters =
                 {
+                    new() { Value = taskListDto.NickName },
                     new() { Value = taskListDto.text },
                     new() { Value = taskListDto.StatusTasks },
                     new() { Value = taskListDto.Created }
@@ -65,13 +66,15 @@ namespace DatabasePostgres.Persistance.Repository
                     while (await reader.ReadAsync())
                     {
                         var id = reader.GetInt16(0);
-                        var text = reader.GetString(1);
-                        var StatusTasks = reader.GetBoolean(2);
-                        var Created = reader.GetDateTime(3);
+                        var NickName = reader.GetString(1);
+                        var text = reader.GetString(2);
+                        var StatusTasks = reader.GetBoolean(3);
+                        var Created = reader.GetDateTime(4);
 
                         TaskListDto = new GetAllTaskListDto
                         {
                             id = id,
+                            NickName = NickName,
                             text = text,
                             StatusTasks = StatusTasks,
                             Created = Created

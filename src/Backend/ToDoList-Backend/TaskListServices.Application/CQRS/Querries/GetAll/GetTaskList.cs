@@ -1,5 +1,7 @@
 ﻿using DatabasePostgres.Persistance.Dto.TaskListDto;
 using DatabasePostgres.Persistance.Interface;
+using System.Net.Http;
+using System.Security.Claims;
 using TaskListServices.Application.Interface;
 
 namespace TaskListServices.Application.CQRS.Command.GetAll

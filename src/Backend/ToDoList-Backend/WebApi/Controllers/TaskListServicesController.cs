@@ -2,6 +2,7 @@
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 using TaskListServices.Application.CQRS.Command.Create;
 using TaskListServices.Application.CQRS.Command.Delete;
 using TaskListServices.Application.CQRS.Command.GetAll;
@@ -51,7 +52,12 @@ namespace WebApi.Controllers
                 
             };
             var answer = await mediator.Send(Content);
-            return Ok(answer);
+
+            ClaimsPrincipal User = this.User;
+            string UserName = User.FindFirst(ClaimTypes.Name)?.Value;
+            var UserObjects = answer.Where(obj => obj.NickName == UserName).ToList();
+
+            return Ok(UserObjects);
         }
 
         [HttpDelete("Delete")]
